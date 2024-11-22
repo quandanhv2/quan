@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cửa Hàng Online</h1>
+    </header>
+
+    <!-- Nút chuyển đổi theme -->
+    <div class="theme-toggle">
+        <button id="toggle-theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Thanh điều hướng -->
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Sản Phẩm</a>
+        <a href="#">Liên Hệ</a>
+        <a href="#">Giới Thiệu</a>
+        <input type="text" id="search" placeholder="Tìm kiếm sản phẩm...">
+        <button id="login-button">Đăng Nhập</button>
+    </nav>
+
+    <!-- Giỏ hàng -->
+    <div id="cart" class="cart">
+        <h3>Giỏ Hàng</h3>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Tổng tiền: 0 VNĐ</p>
+        <button id="checkout">Thanh Toán</button>
+    </div>
+
+    <!-- Modal đăng nhập -->
+    <p>Chưa có tài khoản? <span id="open-register">Đăng ký</span></p>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-login" class="close">&times;</span>
+            <h2>Đăng Nhập</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Tên người dùng" required><br>
+                <input type="password" id="login-password" placeholder="Mật khẩu" required><br>
+                <button type="submit">Đăng Nhập</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal đăng ký -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">&times;</span>
+            <h2>Tạo Tài Khoản</h2>
+            <input type="text" id="register-username" placeholder="Tên người dùng" />
+            <input type="password" id="register-password" placeholder="Mật khẩu" />
+            <input type="password" id="register-confirm-password" placeholder="Xác nhận mật khẩu" />
+            <button id="register-button">Đăng Ký</button>
+            <p>Đã có tài khoản? <span id="open-login">Đăng nhập</span></p>
+        </div>
+    </div>
+
+    <!-- Thông báo khi thêm sản phẩm vào giỏ -->
+    <div id="notification" class="notification">Sản phẩm đã được thêm vào giỏ hàng!</div>
+
+    <!-- Sản phẩm -->
+    <div class="container">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <div class="product">
+            <!-- Card sản phẩm 1 -->
+            <div class="product-card">
+                <img src="anh/IMG_2600.jpg" alt="Áo Thun Nam">
+                <h3>Áo Thun Nam</h3>
+                <p>Áo thun nam chất lượng cao, thoáng mát.</p>
+                <p class="price">150,000 VNĐ</p>
+                <button class="add-to-cart" data-product="Áo Thun Nam" data-price="150000">Mua Ngay</button>
+            </div>
+            <!-- Card sản phẩm 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Quần Jeans">
+                <h3>Quần Jeans</h3>
+                <p>Quần jeans phong cách trẻ trung.</p>
+                <p class="price">350,000 VNĐ</p>
+                <button class="add-to-cart" data-product="Quần Jeans" data-price="350000">Mua Ngay</button>
+            </div>
+            <!-- Card sản phẩm 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Giày Thể Thao">
+                <h3>Giày Thể Thao</h3>
+                <p>Giày thể thao năng động, nhiều màu sắc.</p>
+                <p class="price">500,000 VNĐ</p>
+                <button class="add-to-cart" data-product="Giày Thể Thao" data-price="500000">Mua Ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cửa Hàng Online. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
